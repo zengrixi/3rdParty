@@ -1,0 +1,10 @@
+﻿1、把3rdParty、osg源码、osg-data解压到同一个目录中
+2、启动cmake-gui
+3、设置source、和build路径
+4、configure
+5、勾选build_osg_example、win32_use_mp
+6、设置cmake_install_prefix
+7、设置ACTUAL_3rdparty_dir到x64目录，目录层级不对时无法发现tiff等依赖库
+8、去掉build_osg_deprecated_serializers的勾选
+8、再次configure
+9、generate、open project

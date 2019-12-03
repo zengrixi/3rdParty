@@ -1,0 +1,15 @@
+﻿1、解压osgearth源码
+2、先编译protobuf，启动vs命令行，然后cmake-gui,设置路径D:/software/osg/build_osgEarth/protobuf-3.9.0/cmake
+	修改cmake_install_prefix路径、zlib的库目录和include目录、去掉tests的编译、勾选shared_libs
+	安装后把zlib.dll拷贝到bin目录
+3、编译poco，启动cmake，设置源码路径和编译路径
+	configure，修改cmake_install_prefix、勾选ENABLE_MSVC_MP，反勾选enable_mongodb、enable_data_mysql
+	安装mariadb,并添加环境变量MARIADB_DIR为C:\Program Files\MariaDB 10.4
+	修改findmysql.cmake、findodbc.cmake
+	configure、generate、open project
+	
+	编译rocksdb
+	
+4、configure、反勾选build_test、
+	勾选protobuf_use_dlls、win32_use_mp
+	设置third_party_dir
