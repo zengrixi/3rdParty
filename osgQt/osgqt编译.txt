@@ -1,0 +1,14 @@
+1、解压osgqt的源码
+2、添加环境变量OSG_DIR指向osg的安装目录
+3、修改osgqt的cmakelists.txt，在第4行添加：
+set(DESIRED_QT_VERSION "5.12.4" CACHE STRING "")
+set(CMAKE_PREFIX_PATH "C:/Qt/Qt5.12.4/5.12.4/msvc2017_64" CACHE PATH "")
+用于设置qt
+
+FIND_PACKAGE(OpenSceneGraph 3.6.3 REQUIRED osgDB osgGA osgUtil osgText osgViewer osgWidget)
+SET(OPENSCENEGRAPH_SOVERSION 158)
+
+4、执行cmake-gui，设置source路径和build路径、configure
+5、勾选win32_use_mp、设置cmake_install_prefix、去除build_osg_exmaple的勾选
+6、generate、open project
+7、删除除了debug外的其他对debug.lib和optimized.lib的引入
